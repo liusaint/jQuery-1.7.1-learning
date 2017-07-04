@@ -38,3 +38,8 @@ $()是一个方法。所以不要每个地方都用一下$(this)，而是把它�
 	console.log(b)
 })()
 /*new a.b()的优先级问题*/
+
+/*jQuery中很喜欢用代码求值。
+如if ( (options = arguments[ i ]) != null ) {}
+*/
+
