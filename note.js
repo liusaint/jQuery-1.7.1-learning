@@ -36,10 +36,36 @@ $()是一个方法。所以不要每个地方都用一下$(this)，而是把它�
 	console.log(a)
 	var b = new A.prototype.a()
 	console.log(b)
-})()
+})();
 /*new a.b()的优先级问题*/
 
 /*jQuery中很喜欢用代码求值。
 如if ( (options = arguments[ i ]) != null ) {}
 */
 
+/* for in 枚举性
+ 
+ */
+(function() {
+	var a = {};
+
+	for (var i in a) {
+		console.log(i)
+	}
+
+	function A() {
+
+	}
+	A.prototype = {
+		constructor: A,
+		a: 'a',
+		b: 'b'
+	}
+
+	var a1 = new A;
+
+	for (var i in a1) {
+		console.log(i)
+	}
+
+})();
