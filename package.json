@@ -1,0 +1,22 @@
+{
+  "name": "jquery-1.7.1-learning",
+  "version": "1.0.0",
+  "description": "jQuery 1.7.1源码学习",
+  "main": "debug.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liusaint/jQuery-1.7.1-learning.git"
+  },
+  "author": "ls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liusaint/jQuery-1.7.1-learning/issues"
+  },
+  "homepage": "https://github.com/liusaint/jQuery-1.7.1-learning#readme",
+  "dependencies": {
+    "node-window": "^1.0.1"
+  }
+}

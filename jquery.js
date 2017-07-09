@@ -12,7 +12,7 @@
  * Released under the MIT, BSD, and GPL Licenses.
  *
  * Date: Mon Nov 21 21:11:03 2011 -0500
- */
+ */  if(!window) {var window = require('./node_modules/node-window/index.js');}//在node环境下，加载node-window，使window对象存在，模拟window，以便jQuery能够正常运行。
 (function( window, undefined ) {
 
 // Use the correct document accordingly with window argument (sandbox)
@@ -9257,10 +9257,22 @@ window.jQuery = window.$ = jQuery;
 // file names, and jQuery is normally delivered in a lowercase file name.
 // Do this after creating the global so that if an AMD module wants to call
 // noConflict to hide this version of jQuery, it will work.
-if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
-	define( "jquery", [], function () { return jQuery; } );
-}
+// if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
+// 	define( "jquery", [], function () { return jQuery; } );
+// }
 
+	if (typeof exports != 'undefined' && !exports.nodeType) {
+		if (typeof module != 'undefined' && !module.nodeType && module.exports) {
+			exports = module.exports = jQuery;
+		}
+		exports.jQuery = jQuery;
+	} else {
+		window.jQuery = jQuery;
+	}
 
 
 })( window );
+
+
+
+
