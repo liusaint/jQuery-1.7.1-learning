@@ -4,9 +4,18 @@ if(require){
 	$ = require("./jquery.js");
 }
 
-var callback = $.Callbacks('once');
+var callback = $.Callbacks('once memory');
 callback.add(function(msg){
-	console.log(msg)
+	console.log(msg);
+	return false;
 })
+callback.add(function(msg){
+	console.log(msg,1)
+})
+
 callback.fire('first');
+debugger;
 callback.fire('second');
+callback.add(function(msg){
+	console.log(msg,2)
+})
