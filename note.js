@@ -71,3 +71,6 @@ $()是一个方法。所以不要每个地方都用一下$(this)，而是把它�
 })();
 
 /*this.constructor()这种用法*/
+
+
+/*defer.done(fn1,fn2);jq中的promise中可以添加多个方法一次*/
