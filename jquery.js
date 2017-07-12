@@ -1221,7 +1221,6 @@ jQuery.extend({
 				},
 				pipe: function( fnDone, fnFail, fnProgress ) {
 					return jQuery.Deferred(function( newDefer ) {
-						debugger;
 						jQuery.each( {
 							done: [ fnDone, "resolve" ],
 							fail: [ fnFail, "reject" ],
@@ -1232,7 +1231,6 @@ jQuery.extend({
 								returned;
 							if ( jQuery.isFunction( fn ) ) {
 								deferred[ handler ](function() {
-									debugger;
 									returned = fn.apply( this, arguments );
 									if ( returned && jQuery.isFunction( returned.promise ) ) {
 										returned.promise().then( newDefer.resolve, newDefer.reject, newDefer.notify );
@@ -1269,7 +1267,6 @@ jQuery.extend({
 
 		// Handle state
 		deferred.done( function() {
-			debugger;
 			state = "resolved";
 		}, failList.disable, progressList.lock ).fail( function() {
 			state = "rejected";
@@ -9275,7 +9272,6 @@ window.jQuery = window.$ = jQuery;
 
 
 })( window );
-
 
 
 
