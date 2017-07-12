@@ -74,3 +74,5 @@ $()是一个方法。所以不要每个地方都用一下$(this)，而是把它�
 
 
 /*defer.done(fn1,fn2);jq中的promise中可以添加多个方法一次*/
+
+/* for ( var i = 0, elem; (elem = this[i]) != null; i++ ) { */
