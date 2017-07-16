@@ -21,16 +21,26 @@ if(require){
 // })
 
 
-function fn1(arg){
-	console.log('fn1',arg);
-}
-function fn2(arg){
-	console.log('fn2',arg);
-}
-var defer = $.Deferred(),
-filtered = defer.pipe(function(value){
-	return value *2;
+// function fn1(arg){
+// 	console.log('fn1',arg);
+// }
+// function fn2(arg){
+// 	console.log('fn2',arg);
+// }
+// var defer = $.Deferred(),
+// filtered = defer.pipe(function(value){
+// 	return value *2;
+// })
+// defer.done(fn1);
+// filtered.done(fn2);
+// defer.resolve(5)
+
+
+//兼容性测试
+$(function(){
+	var result = '',counter = 0 ;
+	for(var n in $.support){
+		console.log(n,':',$.support[n]," ",++counter);
+
+	}
 })
-defer.done(fn1);
-filtered.done(fn2);
-defer.resolve(5)
