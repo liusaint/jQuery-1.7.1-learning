@@ -37,10 +37,19 @@ if(require){
 
 
 //兼容性测试
-$(function(){
-	var result = '',counter = 0 ;
-	for(var n in $.support){
-		console.log(n,':',$.support[n]," ",++counter);
+// $(function(){
+// 	var result = '',counter = 0 ;
+// 	for(var n in $.support){
+// 		console.log(n,':',$.support[n]," ",++counter);
 
-	}
-})
+// 	}
+// })
+// 
+// 
+
+$('body').on('click',  function(event) {
+console.log(1);
+});
+$('body').on('click',  function(event) {
+console.log(2);
+});
