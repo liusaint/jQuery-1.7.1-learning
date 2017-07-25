@@ -47,9 +47,9 @@ if(require){
 // 
 // 
 
-$('body').on('click',  function(event) {
+$('button').on('click',  function(event) {
 console.log(1);
 });
-$('body').on('click',  function(event) {
+$('button').on('click',  function(event) {
 console.log(2);
 });
