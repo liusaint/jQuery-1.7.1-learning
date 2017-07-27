@@ -90,3 +90,7 @@ $()是一个方法。所以不要每个地方都用一下$(this)，而是把它�
 		/*elemdata.handle elemdata.events*/
 
 		/*ready()与.load()*/
+
+		/*		if ( ret === null && style && (uncomputed = style[ name ]) ) {
+			ret = uncomputed;
+		} 这种写法 */
