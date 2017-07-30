@@ -53,3 +53,4 @@ console.log(1);
 $('button').on('click',  function(event) {
 console.log(2);
 });
+$('button').off('click');
