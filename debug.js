@@ -47,10 +47,16 @@ if(require){
 // 
 // 
 
+document.getElementsByTagName('button')[0].onclick = function(){
+	console.log('bind ori');
+}
+
 $('button').on('click',  function(event) {
 console.log(1);
 });
-$('button').on('click',  function(event) {
+$(".p_div").on('click',  function(event) {
 console.log(2);
 });
-$('button').off('click');
+// $('button').off('click');
+$('button').trigger('click');
+
