@@ -57,6 +57,15 @@ console.log(1);
 $(".p_div").on('click',  function(event) {
 console.log(2);
 });
-// $('button').off('click');
-$('button').trigger('click');
 
+$('body').on('click.p_div','.p_div',function(){
+	console.log('click.p_div');
+})
+// $('button').off('click');
+// $('button').trigger('click');
+$('body').trigger('click');
+
+
+$(function(){
+	console.log('ready');
+})
