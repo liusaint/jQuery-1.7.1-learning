@@ -69,3 +69,36 @@ $('body').trigger('click');
 $(function(){
 	console.log('ready');
 })
+
+// $(".enter_out").mouseover(function(event) {
+// 	console.log('enter');
+// });
+
+// $(".enter_out").mouseout(function(event) {
+// 	console.log('leave out');
+// });
+
+// $(".enter_in").mouseover(function(event) {
+// 	console.log('over in');
+// });
+
+
+// $("body").mouseout(function(event) {
+// 	console.log('leave body');
+// });
+
+$(".enter_out").mouseenter(function(event) {
+	console.log('enter out');
+});
+
+$(".enter_out").mouseleave(function(event) {
+	console.log('leave out');
+});
+
+$(".enter_in").mouseenter(function(event) {
+	console.log('enter in');
+});
+
+$(".enter_in").mouseleave(function(event) {
+	console.log('leave in');
+});
